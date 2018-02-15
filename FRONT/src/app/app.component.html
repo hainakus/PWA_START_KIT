@@ -1,3 +1,12 @@
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+
 <div class="app">
   <h1>Apache Cordova</h1>
   <div id="deviceready" class="blink">
