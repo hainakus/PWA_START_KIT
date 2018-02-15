@@ -5,7 +5,7 @@
 /FRONT/dist-server
 /FRONT/tmp
 /FRONT/out-tsc
-/PWA/WWW
+
 /PWA/platforms
 # dependencies
 /node_modules
