@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-
+declare var navigator: any;
+declare var Connection: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,8 +12,17 @@ export class AppComponent implements AfterViewInit {
 
   }
 ngAfterViewInit(){
-  this.receivedEvent('deviceready');
+  this.receivedEvent('deviceready')
+  this.checkConnection();
 }
+checkConnection() {
+  var networkState = navigator.connection.type;
+
+  
+  alert('Connection type: ' + networkState);
+}
+
+
 receivedEvent(id){
   var parentElement = document.getElementById(id);
   var listeningElement = parentElement.querySelector('.listening');
